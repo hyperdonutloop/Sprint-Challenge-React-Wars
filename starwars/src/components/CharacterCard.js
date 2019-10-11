@@ -4,15 +4,22 @@ import styled from "styled-components";
 const CharacterCard = (props) => {
 
     const CharWrapper = styled.div`
+        
+        .character-box {
+            text-align: center;
+            padding: 15px;
+        }
+    
         .character-list {
             background-color: #d3aba4;
             opacity: 0.5;
             margin: 48px auto: 0;
-            width: 300px;
-            padding: 0 15px;
+            padding: 15px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
-            display: flex;
-            flex-direction: column;
+            display: inline-block;
+            width: 300px;
+            height: 150px;
+            
         
 
             &:hover {
@@ -24,13 +31,13 @@ const CharacterCard = (props) => {
     `;
     return (
         <CharWrapper>   
-        <div className="character-list">
-            
-                <h2>Name: {props.name} </h2>
-                <p>Birth Year: {props.birth_year}</p>
-                <p>Gender: {props.gender}</p>
-
-        </div>
+            <div className="character-box">
+                <div className="character-list"> 
+                    <h2>Name: {props.name} </h2>
+                    <p>Birth Year: {props.birth_year}</p>
+                    <p>Gender: {props.gender}</p>
+                </div>
+            </div>
         </CharWrapper>   
     )
 }
