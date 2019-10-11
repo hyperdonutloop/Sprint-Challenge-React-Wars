@@ -3,26 +3,26 @@ import axios from "axios";
 import CharacterCard from "./CharacterCard";
 
 export default function CharacterList() {
+
     const [character, setCharacter] = useState([]);
 
     useEffect(() => {
+
         axios
-            .get("https://swapi.co/api/people/")
-            .then(response => {
-                console.log(response.data.results);
-                setCharacter(response.data.results);
-    
-    
-    
+        .get("https://swapi.co/api/people/")
+        .then(response => {
+            console.log(response.data.results);
+            setCharacter(response.data.results);
         })
         .catch (error => {
-          console.log("the data was not returned");
+          console.log("the data was not returned", error);
     
         })
     
     }, []);
 
       return (
+
       <div className="character">
         {character.map((character, index) => {
             return (
@@ -30,7 +30,9 @@ export default function CharacterList() {
                     key={index}
                     name={character.name}
                     birth_year={character.birth_year}
-                    gender = {character.gender}
+                    gender={character.gender}
+                    created={character.created}
+                    eye_color={character.eye_color}
                 />
             );
         })}
