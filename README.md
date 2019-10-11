@@ -26,13 +26,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+### React is a javascript library for building user interfaces. It allows us to create reusable UI components. 
+
 - [ ] What does it mean to _think_ in react?
+
+### The react way of thinking means instead of making a UI and messing with it to show its changes. Instead of doing that we re-render the UI
 
 - [ ] Describe state.
 
+### I read this analogy. When we freeze water we put it into a different state. We change its ‘value’ (temperature) to change its state. State in react is similar, it’s an object that determines how a specific component renders. 
+
 - [ ] Describe props.
 
+### I had an aha moment with props. (I hope this is right) Whenever you set props in your apps.js it is almost like a key:value pair inside an object. This key value pair are your PROPERTIES for that specific component
+
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+### Anything that effects something outside the function being executed. 
 
 ## Project Set Up
 
